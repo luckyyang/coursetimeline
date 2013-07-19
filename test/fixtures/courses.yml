@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  dexcription: MyString
+  title: MyString
+  poster: MyString
+  user_id: 1
+  public: false
+
+two:
+  name: MyString
+  dexcription: MyString
+  title: MyString
+  poster: MyString
+  user_id: 1
+  public: false

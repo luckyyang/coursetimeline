@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  course_id: 1
+  position: 1
+  desc: MyString
+  user_id: 1
+  size: 1
+  filename: MyString
+  content_type: MyString
+  asset: MyString
+
+two:
+  title: MyString
+  course_id: 1
+  position: 1
+  desc: MyString
+  user_id: 1
+  size: 1
+  filename: MyString
+  content_type: MyString
+  asset: MyString
