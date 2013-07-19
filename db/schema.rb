@@ -11,53 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719013301) do
-
-  create_table "courses", :force => true do |t|
-    t.string   "name"
-    t.string   "dexcription"
-    t.string   "title"
-    t.string   "poster"
-    t.integer  "user_id"
-    t.boolean  "public"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "user_id"
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "psssword_digest"
-    t.string   "token"
-    t.boolean  "admin"
-    t.string   "name"
-    t.string   "avatar"
-    t.string   "password_reset_token"
-    t.datetime "password_reset_sent_at"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
-  end
-
-  create_table "videos", :force => true do |t|
-    t.string   "title"
-    t.integer  "course_id"
-    t.integer  "position"
-    t.string   "desc"
-    t.integer  "user_id"
-    t.integer  "size"
-    t.string   "filename"
-    t.string   "content_type"
-    t.string   "asset"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130719015023) do
 
 end
