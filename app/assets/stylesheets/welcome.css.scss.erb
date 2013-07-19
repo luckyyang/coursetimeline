@@ -1,0 +1,93 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ol {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.page-container {
+  width: 900px;
+  margin: 20px auto;
+}
+
+.timeline-container {
+  background: url(<%= asset_path 'line.png' %>) repeat-y center top;
+  margin: 0;
+  padding: 15px 0;
+  position: relative;
+}
+
+.timeline-unit {
+  width: 404px;
+  display: block;
+  position: relative;
+  padding: 13px 15px;
+  margin-bottom: 15px;
+  background: #fff;
+  border: 1px solid #c4cde0;
+  border-radius: 2px;
+}
+
+.timeline-unit-left {
+  float: left;
+  clear: left;
+}
+.timeline-unit-right {
+  float:right;
+  clear: right;
+}
+
+.timeline-add-video {
+  /* border: 1px solid red; */
+}
+
+.timeline-update-video {
+  /* border: 1px solid green; */
+}
+
+.timeline-create-course {
+  /* border: 1px solid blue; */
+}
+
+.spinePointer {
+  background: url(<%= asset_path 'dot.png' %>) repeat-y center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -713px -37px;
+  height: 15px;
+  left: -19px;
+  position: absolute;
+  top: 20px;
+  width: 19px;
+  z-index: 1;
+}
+
+.timeline-unit-left .spinePointer {
+  background: url(<%= asset_path 'dot.png' %>) repeat-y center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -693px -37px;
+  left: auto;
+  right: -19px;
+}
+
+.timeline-unit-right .spinePointer {
+  top: 40px;
+}

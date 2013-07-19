@@ -1,34 +1,39 @@
 <h1>List all types of timeline</h1>
 
 <% if @timelines %>
-  <ol class="timeline-container">
-    <% @timelines.each do |timeline| %>
-      <% if timeline.timeline_type == 'ADD_VIDEO' %>
-        <li class="timeline-add-video">
-        <h3>新添加的视频名称</h3>
-        <p>
-        <%= timeline.name %>
-        </p>
-        </li>
+  <div class="page-container">
+    <ol class="timeline-container clearfix">
+      <% @timelines.each do |timeline| %>
+        <% if timeline.timeline_type == 'ADD_VIDEO' %>
+          <li class="timeline-unit timeline-add-video timeline-unit-left">
+          <h3>新添加的视频名称</h3>
+          <p>
+          <%= timeline.name %>
+          </p>
+          <i class="spinePointer"></i>
+          </li>
+        <% end %>
+        <% if timeline.timeline_type == 'UPDATE_VIDEO' %>
+          <li class="timeline-unit timeline-update-video timeline-unit-right">
+          <h3>更新的视频名称</h3>
+          <p>
+          <%= timeline.name %>
+          </p>
+          <i class="spinePointer"></i>
+          </li>
+        <% end %>
+        <% if timeline.timeline_type == 'CREATE_COURSE' %>
+          <li class="timeline-unit timeline-create-course timeline-unit-left">
+          <h3>新创建的课程名称</h3>
+          <p>
+          <%= timeline.name %>
+          </p>
+          <i class="spinePointer"></i>
+          </li>
+        <% end %>
       <% end %>
-      <% if timeline.timeline_type == 'UPDATE_VIDEO' %>
-        <li class="timeline-update-video">
-        <h3>更新的视频名称</h3>
-        <p>
-        <%= timeline.name %>
-        </p>
-        </li>
-      <% end %>
-      <% if timeline.timeline_type == 'CREATE_COURSE' %>
-        <li class="timeline-create-course">
-        <h3>新创建的课程名称</h3>
-        <p>
-        <%= timeline.name %>
-        </p>
-        </li>
-      <% end %>
-    <% end %>
-  </ol>
+    </ol>
+  </div>
 <% else %>
   <p>没有任何更新</p>
 <% end %>
