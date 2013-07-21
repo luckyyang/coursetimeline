@@ -23,25 +23,40 @@ ol {
 }
 
 .page-container {
-  width: 851px;
+  width: 850px;
   margin: 20px auto;
+  position: relative;
+}
+
+#line-container {
+  width: 4px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+#line {
+  background: #008c7e;
+  height: 100%;
+  left: 424px;
+  width: 3px;
+  position: absolute;
 }
 
 .timeline-container {
-  background: url(<%= asset_path 'line.png' %>) repeat-y center top;
   margin: 0;
   padding: 15px 0;
   position: relative;
 }
 
 .timeline-unit {
-  width: 379px;
+  width: 355px;
   display: block;
   position: relative;
   padding: 13px 15px;
   margin-bottom: 15px;
   background: #fff;
-  border: 1px solid #c4cde0;
+  border: 1px solid #008c7e;
   border-radius: 2px;
 }
 
@@ -52,6 +67,22 @@ ol {
 .timeline-unit-right {
   float:right;
   clear: right;
+}
+.timeline-unit-date {
+  width: 60px;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #008c7e;
+  top: 20px;
+}
+.timeline-unit-left .timeline-unit-date {
+  right: -61px;
+  border-left: none;
+}
+.timeline-unit-right .timeline-unit-date {
+  top: 60px;
+  left: -61px;
+  border-right: none;
 }
 
 .timeline-add-video {
@@ -66,28 +97,3 @@ ol {
   /* border: 1px solid blue; */
 }
 
-.spinePointer {
-  background: url(<%= asset_path 'dot.png' %>) repeat-y center top;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: -713px -37px;
-  height: 15px;
-  left: -19px;
-  position: absolute;
-  top: 20px;
-  width: 19px;
-  z-index: 1;
-}
-
-.timeline-unit-left .spinePointer {
-  background: url(<%= asset_path 'dot.png' %>) repeat-y center top;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: -693px -37px;
-  left: auto;
-  right: -19px;
-}
-
-.timeline-unit-right .spinePointer {
-  top: 40px;
-}

@@ -2,33 +2,36 @@
 
 <% if @timelines %>
   <div class="page-container">
+    <div id="line-container">
+      <div id="line"></div>
+    </div>
     <ol class="timeline-container clearfix">
       <% @timelines.each do |timeline| %>
         <% if timeline.timeline_type == 'ADD_VIDEO' %>
           <li class="timeline-unit timeline-add-video timeline-unit-left">
           <h3>新添加的视频名称</h3>
+          <div class="timeline-unit-date">2013.4.1</div>
           <p>
           <%= timeline.name %>
           </p>
-          <i class="spinePointer"></i>
           </li>
         <% end %>
         <% if timeline.timeline_type == 'UPDATE_VIDEO' %>
           <li class="timeline-unit timeline-update-video timeline-unit-right">
           <h3>更新的视频名称</h3>
+          <div class="timeline-unit-date">2013.5.1</div>
           <p>
           <%= timeline.name %>
           </p>
-          <i class="spinePointer"></i>
           </li>
         <% end %>
         <% if timeline.timeline_type == 'CREATE_COURSE' %>
           <li class="timeline-unit timeline-create-course timeline-unit-left">
           <h3>新创建的课程名称</h3>
+          <div class="timeline-unit-date">2013.6.1</div>
           <p>
           <%= timeline.name %>
           </p>
-          <i class="spinePointer"></i>
           </li>
         <% end %>
       <% end %>
