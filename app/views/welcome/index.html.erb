@@ -9,28 +9,49 @@
       <% @timelines.each do |timeline| %>
         <% if timeline.timeline_type == 'ADD_VIDEO' %>
           <li class="timeline-unit timeline-add-video timeline-unit-left">
-          <h3>新添加的视频名称</h3>
-          <div class="timeline-unit-date">2013.4.1</div>
+          <div class="timeline-header">
+            <a href="#" class="timeline-avatar"> </a>
+            <h4>
+              <a href="#">luckyyang</a>
+              添加了一个
+              <a href="#">视频</a>
+            </h4>
+          </div>
+          <div class="timeline-unit-date"><%= timeline.created_at.strftime('%m月%d日') %></div>
           <p>
-          <%= timeline.name %>
+          <a href="#"><%= timeline.name %></a>
           </p>
           </li>
         <% end %>
         <% if timeline.timeline_type == 'UPDATE_VIDEO' %>
           <li class="timeline-unit timeline-update-video timeline-unit-right">
-          <h3>更新的视频名称</h3>
-          <div class="timeline-unit-date">2013.5.1</div>
+          <div class="timeline-header">
+            <a href="#" class="timeline-avatar"> </a>
+            <h4>
+              <a href="#">luckyyang</a>
+              更新了一个
+              <a href="#">视频</a>
+            </h4>
+          </div>
+          <div class="timeline-unit-date"><%= timeline.updated_at.strftime('%m月%d日') %></div>
           <p>
-          <%= timeline.name %>
+          <a href="#"><%= timeline.name %></a>
           </p>
           </li>
         <% end %>
         <% if timeline.timeline_type == 'CREATE_COURSE' %>
           <li class="timeline-unit timeline-create-course timeline-unit-left">
-          <h3>新创建的课程名称</h3>
-          <div class="timeline-unit-date">2013.6.1</div>
+          <div class="timeline-header">
+            <a href="#" class="timeline-avatar"> </a>
+            <h4>
+              <a href="#">luckyyang</a>
+              创建了一门
+              <a href="#">课程</a>
+            </h4>
+          </div>
+          <div class="timeline-unit-date"><%= timeline.created_at.strftime('%m月%d日') %></div>
           <p>
-          <%= timeline.name %>
+          <a href="#"><%= timeline.name %></a>
           </p>
           </li>
         <% end %>

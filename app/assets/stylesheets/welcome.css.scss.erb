@@ -8,6 +8,14 @@ ol {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #008c7e;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .clearfix {
   zoom: 1;
 }
@@ -57,7 +65,66 @@ ol {
   margin-bottom: 15px;
   background: #fff;
   border: 1px solid #008c7e;
-  border-radius: 2px;
+  border-radius: 3px;
+}
+
+.timeline-unit h4 {
+  margin: 0 0 0 25px;
+}
+
+.timeline-header {
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  font-weight: normal;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.timeline-avatar  {
+  display: block;
+  float: left;
+  height: 20px;
+  width: 20px;
+  background: url(<%= asset_path 'luckyyang_icon.jpg' %>) left top no-repeat;
+  background-size: 20px;
+}
+
+.timeline-unit-date {
+  width: 70px;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #008c7e;
+  top: 20px;
+  text-align: center;
+}
+
+.timeline-add-video {
+  border: 1px solid #8C0054;
+  box-shadow: 0 1px 1px #8C0054;
+}
+
+.timeline-update-video {
+  border: 1px solid #548C00;
+  box-shadow: 0 1px 1px #548C00;
+}
+
+.timeline-create-course {
+  border: 1px solid #38008C;
+  box-shadow: 0 1px 1px #38008C;
+}
+
+.timeline-add-video .timeline-unit-date {
+  border: 1px solid #8C0054;
+  box-shadow: 0 1px 1px #8C000E;
+}
+
+.timeline-update-video .timeline-unit-date {
+  border: 1px solid #548C00;
+  box-shadow: 0 1px 1px #548C00;
+}
+
+.timeline-create-course .timeline-unit-date {
+  border: 1px solid #38008C;
+  box-shadow: 0 1px 1px #38008C;
 }
 
 .timeline-unit-left {
@@ -68,32 +135,14 @@ ol {
   float:right;
   clear: right;
 }
-.timeline-unit-date {
-  width: 60px;
-  position: absolute;
-  background: #fff;
-  border: 1px solid #008c7e;
-  top: 20px;
-}
 .timeline-unit-left .timeline-unit-date {
-  right: -61px;
+  right: -71px;
   border-left: none;
+  box-shadow:none;
 }
 .timeline-unit-right .timeline-unit-date {
   top: 60px;
-  left: -61px;
+  left: -71px;
   border-right: none;
+  box-shadow:none;
 }
-
-.timeline-add-video {
-  /* border: 1px solid red; */
-}
-
-.timeline-update-video {
-  /* border: 1px solid green; */
-}
-
-.timeline-create-course {
-  /* border: 1px solid blue; */
-}
-
