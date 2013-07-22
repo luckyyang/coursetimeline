@@ -1,7 +1,6 @@
-<h1>List all types of timeline</h1>
-
-<% if @timelines %>
-  <div class="page-container">
+<div class="page-container">
+  <h1><a href="#">luckyyang</a>的时间线</h1>
+  <% if @timelines %>
     <div id="line-container">
       <div id="line"></div>
     </div>
@@ -57,7 +56,7 @@
         <% end %>
       <% end %>
     </ol>
-  </div>
-<% else %>
-  <p>没有任何更新</p>
-<% end %>
+  <% else %>
+    <p>没有任何更新</p>
+  <% end %>
+</div>
